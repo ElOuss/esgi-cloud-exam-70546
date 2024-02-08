@@ -1,8 +1,9 @@
 const { Sequelize } = require('sequelize')
+const DBURL = process.env.DATABASE_URL
 
-// database
+
 const sequelize = new Sequelize(
-  'postgres://fakeurl', // TODO
+  DBURL,
   {
     dialectOptions: {
       ssl: {
